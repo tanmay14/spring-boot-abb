@@ -1,4 +1,4 @@
-package com.tanmaynpatel.springboot.totalclasses;
+package com.tanmaynpatel.springboot.model;
 
 import java.math.BigDecimal;
 

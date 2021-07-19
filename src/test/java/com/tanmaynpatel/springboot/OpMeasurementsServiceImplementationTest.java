@@ -16,7 +16,7 @@ import com.tanmaynpatel.springboot.abb.Key;
 import com.tanmaynpatel.springboot.abb.Measurement;
 import com.tanmaynpatel.springboot.abb.Measurements;
 import com.tanmaynpatel.springboot.abb.Power;
-import com.tanmaynpatel.springboot.totalclasses.GroupTotalDetails;
+import com.tanmaynpatel.springboot.model.GroupTotalDetails;
 
 class OpMeasurementsServiceImplementationTest {
 

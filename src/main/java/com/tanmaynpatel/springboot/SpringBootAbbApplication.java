@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.google.gson.Gson;
 import com.tanmaynpatel.springboot.abb.MeasurementList;
 import com.tanmaynpatel.springboot.abb.Measurements;
-import com.tanmaynpatel.springboot.totalclasses.GroupTotalDetails;
+import com.tanmaynpatel.springboot.model.GroupTotalDetails;
 
 @SpringBootApplication
 
@@ -21,13 +21,16 @@ public class SpringBootAbbApplication {
 	public static void main(String[] args) {
 
 		MeasurementList extractMeasurementsFromFile = extractMeasurementsFromFile();
-
+		
+		/*2. Write a method that prints the totals for both groups for in and outgoing power.*/
 		OpMeasurementsServiceImplementation opMeasurementsServiceImplementation = new OpMeasurementsServiceImplementation();
 
 		List<GroupTotalDetails> totalsCalculationForGroups = opMeasurementsServiceImplementation
 				.getTotalsCalculationForGroups(extractMeasurementsFromFile.getMeasurements());
 
 		System.out.println(totalsCalculationForGroups);
+		
+		/* 3. Write a method that outputs a list of all devices, and their max power */
 
 		Measurements allGroupedDevicesWithMaxPower = opMeasurementsServiceImplementation
 				.getAllGroupedDevicesWithMaxPower(extractMeasurementsFromFile.getMeasurements());
@@ -35,7 +38,11 @@ public class SpringBootAbbApplication {
 		System.out.println(allGroupedDevicesWithMaxPower);
 
 	}
-
+	
+	/*
+	 * 1. Read the measurements.json file and store the values in the Measurements
+	 * object.
+	 */
 	@SuppressWarnings("finally")
 	private static MeasurementList extractMeasurementsFromFile() {
 		// JSON parser object to parse read file

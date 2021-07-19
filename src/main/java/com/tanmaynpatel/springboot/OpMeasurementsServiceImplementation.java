@@ -15,9 +15,9 @@ import com.tanmaynpatel.springboot.abb.Key;
 import com.tanmaynpatel.springboot.abb.Measurement;
 import com.tanmaynpatel.springboot.abb.Measurements;
 import com.tanmaynpatel.springboot.abb.Power;
-import com.tanmaynpatel.springboot.totalclasses.DirectionTotalDetail;
-import com.tanmaynpatel.springboot.totalclasses.GroupTotalDetails;
-import com.tanmaynpatel.springboot.totalclasses.TotalDetail;
+import com.tanmaynpatel.springboot.model.DirectionTotalDetail;
+import com.tanmaynpatel.springboot.model.GroupTotalDetails;
+import com.tanmaynpatel.springboot.model.TotalDetail;
 
 public class OpMeasurementsServiceImplementation {
 //2) Write a method that prints the totals for both groups for in and outgoing power.
@@ -67,6 +67,7 @@ public class OpMeasurementsServiceImplementation {
 		}
 		return groupDetailsList;
 	}
+
 
 	private DirectionTotalDetail getDirectionTotaldetail(Direction direction, List<Measurement> measurementList) {
 		DirectionTotalDetail directionTotalDetail = new DirectionTotalDetail();
